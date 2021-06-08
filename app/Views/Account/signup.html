@@ -1,0 +1,108 @@
+<?php require APP_ROOT .'/Views/inc/header.php'; ?>
+
+<!-- End .header -->
+
+<main class="main">
+  <nav aria-label="breadcrumb" class="breadcrumb-nav">
+    <div class="container">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="index.html"><i class="icon-home"></i></a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">Signup</li>
+      </ol>
+    </div>
+    <!-- End .container -->
+  </nav>
+
+  <div class="container">
+    <div class="col-md-8">
+      <div class="heading">
+        <h2 class="title">Create An Account</h2>
+        <p>
+          By creating an account with our store, you will be able to move
+          through the checkout process faster, store multiple shipping
+          addresses, view and track your orders in your account and more.
+        </p>
+      </div>
+    </div>
+    <form action="#" id="signup-id">
+      <div class="row">
+        <div class="col-md-6">
+          <input
+            type="text"
+            name="fname"
+            class="form-control"
+            placeholder="First Name"
+            required
+          />
+          <input
+            type="text"
+            name="lname"
+            class="form-control"
+            placeholder="Middle Name"
+            required
+          />
+          <input
+            type="text"
+            name="mname"
+            class="form-control"
+            placeholder="Last Name"
+            required
+          />
+        </div>
+        <div class="col-md-6">
+          <input
+            type="email"
+            name="email"
+            class="form-control"
+            placeholder="Email Address"
+            required
+          />
+          <input
+            type="password"
+            name="password"
+            class="form-control"
+            placeholder="Password"
+            required
+          />
+          <input
+            type="password"
+            name="cpassword"
+            class="form-control"
+            placeholder="Confirm Password"
+            required
+          />
+
+          <div class="custom-control custom-checkbox">
+            <input
+              name="newsletter"
+              type="checkbox"
+              class="custom-control-input"
+              id="newsletter-signup"
+            />
+            <label class="custom-control-label" for="newsletter-signup"
+              >Sing up our Newsletter</label
+            >
+          </div>
+          <!-- End .custom-checkbox -->
+
+          <div class="form-footer">
+            <button type="submit" class="btn btn-primary" id="signup-btn">
+              Create Account
+            </button>
+          </div>
+          <!-- End .form-footer -->
+        </div>
+        <!-- End .col-md-6 -->
+      </div>
+    </form>
+    <!-- End .row -->
+  </div>
+  <!-- End .container -->
+
+  <div class="mb-5"></div>
+  <!-- margin -->
+</main>
+<!-- End .main -->
+<?php require APP_ROOT .'/Views/inc/footer.php'; ?>
