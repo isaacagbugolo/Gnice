@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul
+          style="
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+          "
+        >
+          <li><a href="<?php echo APP_URL;?>/">Home</a></li>
+          <li><a href="<?php echo APP_URL;?>/Signup/index">Signup</a></li>
+          <li><a href="<?php echo APP_URL;?>/Login/index">Login</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <h3>Signup</h3>
+    <form
+      action=""
+      method="post"
+      style="
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+      "
+      id="signup"
+    >
+      <label for="name">Name</label>
+      <input type="text" name="name" id="name" placeholder="enter your Name" />
+      <small>error</small>
+      <label for="email">email</label>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        placeholder="enter your email"
+      />
+      <small></small>
+      <label for="password">password</label>
+      <input
+        type="password"
+        name="password"
+        id="password"
+        placeholder="enter your password"
+      />
+      <small>error</small>
+      <label for="cpassword">password</label>
+      <input
+        type="password"
+        name="cpassword"
+        id="cpassword"
+        placeholder="enter your confirm password"
+      />
+      <button type="submit" style="margin-top: 10px">Submit</button>
+    </form>
+
+    <!-- <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"
+      integrity="sha512-UdIMMlVx0HEynClOIFSyOrPggomfhBKJE28LKl8yR3ghkgugPnG6iLfRfHwushZl1MOPSY6TsuBDGPK2X4zYKg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script>
+      $.validate.addMethod("validPassword"),
+        function (value, element, param) {
+          if (value != "") {
+            if (value.match(/.*[a-z]+.*/i) == null) {
+              return false;
+            }
+            return true;
+            if (value.match(/.*\d+.*/) == null) {
+              return false;
+            }
+            return true;
+          }
+          ("Must contain at least one letter and done number");
+        };
+      $(document).ready(function () {
+        $("#signup-id").validate({
+          rules: {
+            name: "required",
+            email: {
+              required: true,
+              email: true,
+              remote: "account/validateEmail/",
+            },
+            password: {
+              required: true,
+              minlength: 6,
+              validPassword: true,
+            },
+            cpassword: {
+              equalTo: "#password",
+            },
+          },
+          messages: {
+            email: {
+              remote: "email already taken",
+            },
+          },
+        });
+      });
+    </script> -->
+    <script src="<?php echo APP_URL;?>/assets/js/app.js"></script>
+    <script src="<?php echo APP_URL;?>/assets/js/signup.js"></script>
+  </body>
+</html>
