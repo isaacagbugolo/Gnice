@@ -86,7 +86,5 @@ class Database{
           return $this->statement->rowCount();
       }
 
-      public function index(){
-         echo 'Database';
-    }
+     
 }
